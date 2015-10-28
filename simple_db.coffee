@@ -40,17 +40,22 @@ scrpt = (k) ->
     </script>"""
   else
     """<script>function mba(){alert('G.Pruss 2015')}
-    function mbh(){alert('No worry, all will be fine')}</script>"""
+    function mbh(){alert('No worry, all will be fine')}
+    function edr(n) {alert('Edit '+n)}
+    </script>"""
 
-menu = ->
-  "<p><a href='/info'>info</a> <a href='/add'>add</a> <a href='/edit'>edit</a> "+
-  "<a href='/filter'>filter</a> <a href='/save'>save</a> <a href='/savev'>save visible</a> "+
-  "<a href='/print'>print</a> "+
-  "<a href='javascript:mbh()'>help</a> <a href='javascript:mba();'>about</a> <a href='/quit'>quit</a></p>\n"
+menu = (k) ->
+  if k=='add'
+    "<p><a href='javascript:ok()'>ok</a> <a href='javascript:cancel()'>cancel</a></p>\n"
+  else
+    "<p><a href='/info'>info</a> <a href='/add'>add</a> <a href='/edit'>edit</a> "+
+    "<a href='/filter'>filter</a> <a href='/save'>save</a> <a href='/savev'>save visible</a> "+
+    "<a href='/print'>print</a> <a href='javascript:mbh()'>help</a> "+
+    "<a href='javascript:mba();'>about</a> <a href='/quit'>quit</a></p>\n"
 
 add_record = (res, recs) ->
   text = """<html><head>#{scrpt('add')}</head>
-    <body style='margin: 10px; padding: 0px'>\n#{menu()}<div style='height:80vh'><form>\n
+    <body style='margin: 10px; padding: 0px'>\n#{menu('add')}<div class='scrl'><form>\n
     invoice: <input type='text' width=2></input><br>
     date_done: <input type='text' width=20></input><br>
     <button text='ok' onclick='sendadd(this)'>OK</button>
@@ -58,20 +63,24 @@ add_record = (res, recs) ->
   writepage res,text
 
 show_db = (res, recs) ->
-  text = "<html><head>#{scrpt('')}</head>\n"+
-    "<body style='margin: 10px; padding: 0px'>\n#{menu()}<div style='height:80vh'><table>\n"
+  text = """<html><head>#{scrpt('')}
+    <style>body{margin:10px;padding:0px;height:95%;} td{white-space: nowrap;}
+      div.scrl{height:90%;width:70%;background-color:#EFF;display:inline-block;float:left;
+      overflow-y:auto;overflow-x:hidden;border:1px solid #000;} table{width:100%;}
+      thead,thead tr:hover{background-color:#CCC} tr:hover{background-color:#EEF;}
+    </style></head><body>\n#{menu('')}<div class='scrl'><table>\n"""
   header = recs[0]
-  text += "<thead style='background-color:#CCC'>"
+  text += "<thead><tr>"
   for field in header
     text += "<th>#{field.split(':')[0]}</th>"
-  text += "</thead>\n"
+  text += "</tr></thead><tbody>\n"
   for rec in recs[1..]
     clr = if rec[rec.length-1]=='overdue' then ' style="color:red"' else ''
-    text += "<tr#{clr}>"
+    text += "<tr#{clr} onclick='edr(#{rec[0]})'>"
     for field in rec
       text += "<td>#{field}</td>"
     text += "</tr>\n"
-  text += "</table></div></body></html>"
+  text += "</tbody></table></div></body></html>"
   writepage res,text
 
 [maxinvoice,recs] = read_db "i_track.tdb"
