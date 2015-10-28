@@ -1,0 +1,40 @@
+invoice:i;date_done:d;customer:s;descr:s;amount:m;date_due:d;status:s
+1;2003.09.25;Comp1;Rus>Eng, medical, Borisov;$300.30;2003.10.25;
+2;2003.10.06;Comp1;Rus>Eng, medical, Borisov, addendum;$186.50;2003.11.05;
+201;2003.10.20;ABCD;Rus>Eng, legal, Skrypnik;$66.99;2003.11.19;
+202;2003.10.30;ABCD;Rus>Eng, legal, Rogozina;$15.00;2003.11.29;zzz
+203;2004.01.05;ABCD;Rus>Eng, legal, Govorun;$20.00;2004.02.04;
+253;2005.01.12;ABCD;Rus>Eng, legal, Botan;$15.00;2005.02.11;
+254;2005.01.13;ABCD;Rus>Eng, legal, Liudmila;$25.85;2005.02.12;
+255;2005.01.18;ABCD;Rus>Eng, legal, Fishberg;$83.05;2005.02.17;
+209;2004.01.31;ABCD;Rus>Eng, legal, Fishman;$45.00;2004.03.01;
+257;2005.02.02;ABCD;Fra>Eng, legal, Mostov;$15.00;2005.03.04;
+211;2004.02.05;ABCD;Rus>Eng, legal, Govorun;$15.00;2004.03.06;
+259;2005.02.08;ABCD;Rus>Eng, legal, Kira;$35.64;2005.03.10;overdue
+213;2004.02.26;ABCD;Fra>Eng, legal, Sun;$45.00;2004.03.27;
+266;2005.03.01;ABCD;Fra>Eng, legal, Phandourin;$15.00;2005.03.31;overdue
+267;2005.03.03;ABCD;Fra>Eng, legal, Kawasaki;$17.82;2005.04.04;overdue
+217;2004.04.01;ABCD;Fra>Eng, legal, Bahmet;$85.00;2004.05.01;
+220;2004.05.12;ABCD;Fra>Eng, legal, Fitzgerald;$30.00;2004.06.11;
+221;2004.06.02;ABCD;Fra>Eng, Rus>Eng, legal, Allais, Kuzma;$62.37;2004.07.02;
+223;2004.06.20;ABCD;Rus>Eng, legal, Smirnova;$20.13;2004.07.20;
+225;2004.07.02;ABCD;Fra>Eng, legal, Sotomear;$39.71;2004.08.01;
+226;2004.07.07;ABCD;Rus>Eng, legal, Botan;$112.20;2004.08.06;
+229;2004.07.24;ABCD;Rus>Eng, legal, Turkish;$15.00;2004.08.23;
+232;2004.08.11;ABCD;Rus>Eng, legal, --N5--;$47.30;2004.09.10;
+233;2004.08.16;ABCD;Rus>Eng, legal, Polyakova;$15.00;2004.09.15;
+234;2004.08.17;ABCD;Rus>Eng, legal, Voyevodin;$15.00;2004.09.16;
+235;2004.08.29;ABCD;Fra>Eng, legal, Kabare;$27.28;2004.09.28;
+236;2004.08.30;ABCD;Fra>Eng, legal, JackJ;$26.40;2004.09.29;
+237;2004.09.02;ABCD;Ukr>Eng, legal, Tonia;$47.85;2004.10.02;
+240;2004.09.23;ABCD;Fra>Eng, legal, Smolian;$99.55;2004.10.23;
+241;2004.09.26;ABCD;Fra>Eng, legal, Kudelsky;$56.10;2004.10.26;
+242;2004.09.29;ABCD;Rus>Eng, legal, Bakhmet;$30.00;2004.10.29;
+252;2004.12.20;ABCD;Rus>Eng, legal, Semenov;$15.00;2005.01.19;
+222;2004.06.16;Translate;Rus>Eng, legal, Ivanov;$14.52;2004.07.16;
+216;2004.03.21;New Bank;Rus>Eng, legal, editing;$50.00;2004.04.20;
+249;2004.12.04;Albooo;Eng>Rus, legal;$139.92;2005.01.03;
+256;2005.01.18;Albooo;Rus>Eng, legal;$32.64;2005.02.17;
+357;2007.02.02;ABCD;Fra>Eng, legal, Mostov;$15.00;2007.09.04;
+311;2007.02.05;ABCD;Rus>Eng, legal, Govorun;$15.00;2007.09.06;overdue
+359;2007.02.08;ABCD;Rus>Eng, legal, Kira;$35.64;2007.03.10;overdue
